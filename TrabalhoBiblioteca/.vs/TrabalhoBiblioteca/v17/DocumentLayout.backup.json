@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\trabalhobiblioteca\\trabalhobiblioteca\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|solutionrelative:trabalhobiblioteca\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\trabalhobiblioteca\\trabalhobiblioteca\\model\\livromodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|solutionrelative:trabalhobiblioteca\\model\\livromodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\trabalhobiblioteca\\trabalhobiblioteca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{19362A02-9D9B-4293-8940-1EC47B11644C}|TrabalhoBiblioteca\\TrabalhoBiblioteca.csproj|solutionrelative:trabalhobiblioteca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LivroModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\Model\\LivroModel.cs",
+              "RelativeDocumentMoniker": "TrabalhoBiblioteca\\Model\\LivroModel.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\Model\\LivroModel.cs",
+              "RelativeToolTip": "TrabalhoBiblioteca\\Model\\LivroModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T20:35:38.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\appsettings.json",
+              "RelativeDocumentMoniker": "TrabalhoBiblioteca\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\appsettings.json",
+              "RelativeToolTip": "TrabalhoBiblioteca\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-18T20:32:10.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LivroController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\Controllers\\LivroController.cs",
+              "RelativeDocumentMoniker": "TrabalhoBiblioteca\\Controllers\\LivroController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\TrabalhoBiblioteca\\TrabalhoBiblioteca\\Controllers\\LivroController.cs",
+              "RelativeToolTip": "TrabalhoBiblioteca\\Controllers\\LivroController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAawFIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T20:25:03.59Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
