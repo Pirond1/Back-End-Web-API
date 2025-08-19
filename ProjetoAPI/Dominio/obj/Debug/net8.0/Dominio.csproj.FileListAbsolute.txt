@@ -1,0 +1,15 @@
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\bin\Debug\net8.0\Dominio.deps.json
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\bin\Debug\net8.0\Dominio.runtimeconfig.json
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\bin\Debug\net8.0\Dominio.dll
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\bin\Debug\net8.0\Dominio.pdb
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.csproj.AssemblyReference.cache
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.sourcelink.json
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.dll
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.pdb
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\Dominio.genruntimeconfig.cache
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\Dominio\obj\Debug\net8.0\ref\Dominio.dll
