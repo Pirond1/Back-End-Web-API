@@ -3,6 +3,7 @@ using Infraestrutura.Repositorio;
 using Interface.Repositorio;
 using Interface.Service;
 using Microsoft.EntityFrameworkCore;
+using ProjetoAPI.Mapping;
 using Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EmpresaContexto>(p => p.UseSqlServer(builder.Configuration.GetConnectionString("default")));
+
+builder.Services.AddAutoMapper(p => p.AddProfile<MappingProfile>());
 
 builder.Services.AddScoped<ICategoriaRepositorio, CategoriaRepositorio>();
 builder.Services.AddScoped<ICategoriaService, CategoriaService>();
