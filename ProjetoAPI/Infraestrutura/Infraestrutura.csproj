@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="CrossCuting\" />
     <Folder Include="Data\" />
-    <Folder Include="Repositorio\" />
   </ItemGroup>
 
   <ItemGroup>

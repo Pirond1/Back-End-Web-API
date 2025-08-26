@@ -175,3 +175,4 @@ C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\ProjetoAPI\
 C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\ProjetoAPI\obj\Debug\net8.0\ProjetoAPI.pdb
 C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\ProjetoAPI\obj\Debug\net8.0\ProjetoAPI.genruntimeconfig.cache
 C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\ProjetoAPI\obj\Debug\net8.0\ref\ProjetoAPI.dll
+C:\Users\gustavopirondi\Documents\GitHub\Back-End-Web-API\ProjetoAPI\ProjetoAPI\bin\Debug\net8.0\AutoMapper.dll
