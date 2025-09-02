@@ -4743,23 +4743,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gustavopirondi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Interface.csproj",
+      "projectUniqueName": "C:\\Users\\gustavopirondi\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Interface.csproj",
       "projectName": "Interface",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Interface.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\obj\\",
+      "projectPath": "C:\\Users\\gustavopirondi\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Interface.csproj",
+      "packagesPath": "C:\\Users\\gustavopirondi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gustavopirondi\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gustavopirondi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4775,8 +4777,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Dominio.csproj"
+            "C:\\Users\\gustavopirondi\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\gustavopirondi\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Dominio.csproj"
             }
           }
         }
@@ -4785,13 +4787,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4834,7 +4830,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

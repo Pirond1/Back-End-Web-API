@@ -30,14 +30,14 @@ namespace GerenciadorTarefas.Controllers
             return Ok(lista);
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> deleteAsync(int id)
         {
             await this.service.removeAsync(id);
             return NoContent();
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> updateAsync(TipoTarefaDTO tipo)
         {
             await this.service.updateAsync(tipo);

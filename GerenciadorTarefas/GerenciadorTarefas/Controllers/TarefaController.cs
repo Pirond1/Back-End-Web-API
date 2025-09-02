@@ -31,7 +31,7 @@ namespace GerenciadorTarefas.Controllers
             return Ok(lista);
         }
 
-        [HttpGet("/{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<TarefaDTO>> getAsync(int id)
         {
             var tarefa = await this.service.getAsync(id);
@@ -45,14 +45,14 @@ namespace GerenciadorTarefas.Controllers
             }
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> deleteAsync(int id)
         {
             await this.service.removeAsync(id);
             return NoContent();
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> updateAsync(TarefaDTO tar)
         {
             await this.service.updateAsync(tar);

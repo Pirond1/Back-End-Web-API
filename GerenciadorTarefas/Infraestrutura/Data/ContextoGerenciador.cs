@@ -28,6 +28,7 @@ namespace Infraestrutura.Data
                 builder.ToTable("Tarefa");
                 builder.HasKey(p => p.id);
                 builder.HasOne(p => p.tipotarefa).WithMany(p => p.tarefas).HasForeignKey(p => p.idTipoTarefa).OnDelete(DeleteBehavior.Restrict);
+                builder.HasOne(p => p.login).WithMany(p => p.tarefas).HasForeignKey(p => p.idLogin).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<TipoTarefa>(builder =>
