@@ -9,13 +9,12 @@ namespace GerenciadorTarefas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
-    public class TipoTarefaController : ControllerBase
+    public class LoginController : ControllerBase
     {
-        private ITipoTarefaService service;
-        private IValidator<TipoTarefaDTO> validator;
+        private ILoginService service;
+        private IValidator<LoginDTO> validator;
 
-        public TipoTarefaController(ITipoTarefaService service, IValidator<TipoTarefaDTO> validator)
+        public LoginController(ILoginService service, IValidator<LoginDTO> validator)
         {
             this.service = service;
             this.validator = validator;
@@ -23,51 +22,58 @@ namespace GerenciadorTarefas.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<TipoTarefaDTO>> addAsync(TipoTarefaDTO tipoTarefaDTO)
+        public async Task<ActionResult<LoginDTO>>addAsync(LoginDTO login)
         {
-            var result = validator.Validate(tipoTarefaDTO);
+
+            var result = validator.Validate(login);
             if (result.IsValid)
             {
-                var dto = await this.service.addAsync(tipoTarefaDTO);
+                var dto = await this.service.addAsync(login);
                 return Ok(dto);
             }
             else
-            {
                 return BadRequest(result);
-            }
-            
+
+
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<TipoTarefaDTO>>> getAllAsync()
+        public async Task<ActionResult<IEnumerable<LoginDTO>>>getAllAsync()
         {
             var lista = await this.service.getAllAsync(p => true);
             return Ok(lista);
+
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<LoginDTO>>getAsync(int id)
+        {
+            var login = await this.service.getAsync(id);
+            if (login == null)
+                return NotFound();
+            else
+                return Ok(login);
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> deleteAsync(int id)
         {
+
             await this.service.removeAsync(id);
             return NoContent();
         }
 
-        [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<ActionResult> updateAsync(TipoTarefaDTO tipo)
+        [HttpPut]
+        public async Task<ActionResult> updateAsync(LoginDTO login)
         {
-            var result = validator.Validate(tipo);
+            var result = validator.Validate(login);
             if (result.IsValid)
             {
-                await this.service.updateAsync(tipo);
+                await this.service.updateAsync(login);
                 return NoContent();
             }
-            else
-            {
-                return BadRequest(result);
-            }
-            
+            else return BadRequest(result);
+
         }
     }
 }

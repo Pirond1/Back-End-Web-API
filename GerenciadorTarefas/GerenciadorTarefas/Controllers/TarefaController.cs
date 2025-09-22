@@ -1,5 +1,7 @@
 ﻿using Dominio.DTOs;
+using FluentValidation;
 using Interface.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
@@ -11,10 +13,12 @@ namespace GerenciadorTarefas.Controllers
     public class TarefaController : ControllerBase
     {
         private ITarefaService service;
+        private IValidator<TarefaDTO> validator;
 
-        public TarefaController(ITarefaService service)
+        public TarefaController(ITarefaService service, IValidator<TarefaDTO> validator)
         {
             this.service = service;
+            this.validator = validator;
         }
 
         [HttpPost]
