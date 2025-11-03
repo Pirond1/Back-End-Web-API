@@ -31,6 +31,21 @@ namespace Service
             return mapper.Map<LoginDTO>(entidade);
         }
 
+        public async Task<LoginDTO?> AutenticarAsync(LoginDTO loginDetalhes)
+        {
+            var usuario = await this.repositorio.getUserAsync(loginDetalhes.usuario);
+            if (usuario == null)
+            {
+                return null;
+            }
+            if (loginDetalhes.senha == usuario.senha)
+            {
+                return mapper.Map<LoginDTO>(usuario);
+            }
+
+            return null;
+        }
+
         public async Task<IEnumerable<LoginDTO>> getAllAsync(Expression<Func<Login, bool>> expression)
         {
             var listaLogin = await this.repositorio.getAllAsync(expression);

@@ -4,6 +4,10 @@ using Interface.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace GerenciadorTarefas.Controllers
 {
@@ -13,15 +17,16 @@ namespace GerenciadorTarefas.Controllers
     {
         private ILoginService service;
         private IValidator<LoginDTO> validator;
+        private IConfiguration _config;
 
-        public LoginController(ILoginService service, IValidator<LoginDTO> validator)
+        public LoginController(ILoginService service, IValidator<LoginDTO> validator, IConfiguration config)
         {
             this.service = service;
             this.validator = validator;
+            this._config = config;
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<LoginDTO>>addAsync(LoginDTO login)
         {
 
@@ -74,6 +79,58 @@ namespace GerenciadorTarefas.Controllers
             }
             else return BadRequest(result);
 
+        }
+
+        [HttpPost("Auth")]
+        public async Task<ActionResult> auth(LoginDTO login)
+        {
+            var result = validator.Validate(login);
+            if (!result.IsValid)
+            {
+                return BadRequest(result);
+            }
+
+            var usuario = await this.service.AutenticarAsync(login);
+
+            if (usuario != null)
+            {
+                var tokenString = GerarTokenJWT(usuario);
+
+                return Ok(new
+                {
+                    acces_token = tokenString,
+                    token_type = "Bearer",
+                    expires_in = 60 * 60 //60 Min
+                });
+            }
+            else
+            {
+                return Unauthorized("Usuário ou Senha Inválidos!");
+            }
+        }
+
+        private string GerarTokenJWT(LoginDTO usuario)
+        {
+            var issuer = _config["Jwt:Issuer"];
+            var audience = _config["Jwt:Audience"];
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, usuario.usuario),
+                new Claim(ClaimTypes.Role, "Admin")
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(120),
+                signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

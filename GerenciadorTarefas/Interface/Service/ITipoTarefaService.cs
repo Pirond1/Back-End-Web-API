@@ -11,10 +11,10 @@ namespace Interface.Service
 {
     public interface ITipoTarefaService
     {
-        Task<TipoTarefaDTO> addAsync(TipoTarefaDTO tipoTarefa);
-        Task<IEnumerable<TipoTarefaDTO>> getAllAsync(Expression<Func<TipoTarefa, bool>> expression);
-        Task<TipoTarefaDTO?> getAsync(int id);
-        Task updateAsync(TipoTarefaDTO tipoTarefa);
-        Task removeAsync(int id);
+        Task<TipoTarefaDTO> addAsync(TipoTarefaDTO tipoTarefa, int userID);
+        Task<IEnumerable<TipoTarefaDTO>> getAllAsync(int userID);
+        Task<TipoTarefaDTO?> getAsync(int id, int userID);
+        Task updateAsync(TipoTarefaDTO tipoTarefa, int userID);
+        Task removeAsync(int id, int userID);
     }
 }

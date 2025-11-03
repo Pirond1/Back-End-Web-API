@@ -24,38 +24,49 @@ namespace Service
             this.mapper = mapper;
         }
 
-        public async Task<TarefaDTO> addAsync(TarefaDTO tarefa)
+        public async Task<TarefaDTO> addAsync(TarefaDTO tarefa, int userID)
         {
             var entidade = mapper.Map<Tarefa>(tarefa);
+            entidade.idLogin = userID;
             entidade = await this.repositorio.addAsync(entidade);
             return mapper.Map<TarefaDTO>(entidade);
         }
 
-        public async Task<IEnumerable<TarefaDTO>> getAllAsync(Expression<Func<Tarefa, bool>> expression)
+        public async Task<IEnumerable<TarefaDTO>> getAllAsync(int userID)
         {
-            var listaTarefa = await this.repositorio.getAllAsync(expression);
+            var listaTarefa = await this.repositorio.getAllAsync(t => t.idLogin == userID);
             return mapper.Map<IEnumerable<TarefaDTO>>(listaTarefa);
         }
 
-        public async Task<TarefaDTO?> getAsync(int id)
+        public async Task<TarefaDTO?> getAsync(int id, int userID)
         {
             var listaTarefa = await this.repositorio.getAsync(id);
+            if (listaTarefa == null || listaTarefa.idLogin != userID)
+            {
+                return null;
+            }
             return mapper.Map<TarefaDTO>(listaTarefa);
         }
 
-        public async Task removeAsync(int id)
+        public async Task removeAsync(int id, int userID)
         {
             var tarefa = await this.repositorio.getAsync(id);
-            if(tarefa != null)
+            if(tarefa != null && tarefa.idLogin == userID)
             {
                 await this.repositorio.removeAsync(tarefa);
-            }
+            }     
         }
 
-        public async Task updateAsync(TarefaDTO tarefa)
+        public async Task updateAsync(TarefaDTO tarefa, int userID)
         {
-            var tar = mapper.Map<Tarefa>(tarefa);
-            await this.repositorio.updateAsync(tar);
+            var tar = await this.repositorio.getAsync(tarefa.id);
+            if (tar != null && tar.idLogin == userID)
+            {
+                mapper.Map(tarefa, tar);
+                tar.idLogin = userID;
+                await this.repositorio.updateAsync(tar);
+            }
+            
         }
     }
 }

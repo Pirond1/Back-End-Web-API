@@ -13,5 +13,6 @@ namespace Dominio.Entidades
         public string senha { get; set; } = String.Empty;
 
         public virtual List<Tarefa> tarefas { get; set; } = new List<Tarefa>();
+        public virtual List<TipoTarefa> tipotarefas { get; set; } = new List<TipoTarefa>();
     }
 }

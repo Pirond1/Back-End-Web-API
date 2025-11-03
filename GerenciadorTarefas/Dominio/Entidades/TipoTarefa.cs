@@ -11,6 +11,9 @@ namespace Dominio.Entidades
         public int id { get; set; }
         public string nome { get; set; }
 
+        public int idLogin { get; set; }
+        public virtual Login? login { get; set; }
+
         public virtual List<Tarefa> tarefas { get; set; } = new List<Tarefa>();
     }
 }

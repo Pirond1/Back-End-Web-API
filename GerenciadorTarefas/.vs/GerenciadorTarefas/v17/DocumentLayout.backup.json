@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED7D0B74-BC19-4423-BDDC-593FC111CAFF}|Service\\Service.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED7D0B74-BC19-4423-BDDC-593FC111CAFF}|Service\\Service.csproj|solutionrelative:service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C4D5725-89BC-4DD3-AFDD-FD6943088C67}|Dominio\\Dominio.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\dominio\\dtos\\tarefadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C4D5725-89BC-4DD3-AFDD-FD6943088C67}|Dominio\\Dominio.csproj|solutionrelative:dominio\\dtos\\tarefadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2EABCB9-B69F-4702-9470-05A7470267AF}|GerenciadorTarefas\\GerenciadorTarefas.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\gerenciadortarefas\\controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2EABCB9-B69F-4702-9470-05A7470267AF}|GerenciadorTarefas\\GerenciadorTarefas.csproj|solutionrelative:gerenciadortarefas\\controllers\\tarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2EABCB9-B69F-4702-9470-05A7470267AF}|GerenciadorTarefas\\GerenciadorTarefas.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\gerenciadortarefas\\controllers\\tipotarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2EABCB9-B69F-4702-9470-05A7470267AF}|GerenciadorTarefas\\GerenciadorTarefas.csproj|solutionrelative:gerenciadortarefas\\controllers\\tipotarefacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7D0B74-BC19-4423-BDDC-593FC111CAFF}|Service\\Service.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\service\\tipotarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7D0B74-BC19-4423-BDDC-593FC111CAFF}|Service\\Service.csproj|solutionrelative:service\\tipotarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FE7343C-EDBC-4E5D-833F-5B73922AF54B}|Interface\\Interface.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\interface\\service\\itipotarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FE7343C-EDBC-4E5D-833F-5B73922AF54B}|Interface\\Interface.csproj|solutionrelative:interface\\service\\itipotarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C4D5725-89BC-4DD3-AFDD-FD6943088C67}|Dominio\\Dominio.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\dominio\\entidades\\tipotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C4D5725-89BC-4DD3-AFDD-FD6943088C67}|Dominio\\Dominio.csproj|solutionrelative:dominio\\entidades\\tipotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FE7343C-EDBC-4E5D-833F-5B73922AF54B}|Interface\\Interface.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\interface\\repositorio\\itipotarefarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FE7343C-EDBC-4E5D-833F-5B73922AF54B}|Interface\\Interface.csproj|solutionrelative:interface\\repositorio\\itipotarefarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D621666F-8141-497F-BAAD-B08C4CF36974}|Infraestrutura\\Infraestrutura.csproj|c:\\users\\user\\documents\\github\\back-end-web-api\\gerenciadortarefas\\infraestrutura\\repositorio\\tipotarefarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D621666F-8141-497F-BAAD-B08C4CF36974}|Infraestrutura\\Infraestrutura.csproj|solutionrelative:infraestrutura\\repositorio\\tipotarefarepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Service\\LoginService.cs",
-              "RelativeDocumentMoniker": "Service\\LoginService.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Service\\LoginService.cs",
-              "RelativeToolTip": "Service\\LoginService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwCMAAAA6AAAAAAAAAA==",
+              "Title": "TarefaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\DTOs\\TarefaDTO.cs",
+              "RelativeDocumentMoniker": "Dominio\\DTOs\\TarefaDTO.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\DTOs\\TarefaDTO.cs",
+              "RelativeToolTip": "Dominio\\DTOs\\TarefaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T00:22:34.064Z",
+              "WhenOpened": "2025-11-03T22:19:04.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TarefaController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\GerenciadorTarefas\\Controllers\\TarefaController.cs",
+              "RelativeDocumentMoniker": "GerenciadorTarefas\\Controllers\\TarefaController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\GerenciadorTarefas\\Controllers\\TarefaController.cs",
+              "RelativeToolTip": "GerenciadorTarefas\\Controllers\\TarefaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T22:10:36.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TipoTarefa.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Entidades\\TipoTarefa.cs",
+              "RelativeDocumentMoniker": "Dominio\\Entidades\\TipoTarefa.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Dominio\\Entidades\\TipoTarefa.cs",
+              "RelativeToolTip": "Dominio\\Entidades\\TipoTarefa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:44:43.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ITipoTarefaService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Service\\ITipoTarefaService.cs",
+              "RelativeDocumentMoniker": "Interface\\Service\\ITipoTarefaService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Service\\ITipoTarefaService.cs",
+              "RelativeToolTip": "Interface\\Service\\ITipoTarefaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:56:02.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TipoTarefaService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Service\\TipoTarefaService.cs",
+              "RelativeDocumentMoniker": "Service\\TipoTarefaService.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Service\\TipoTarefaService.cs",
+              "RelativeToolTip": "Service\\TipoTarefaService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:56:01.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITipoTarefaRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Repositorio\\ITipoTarefaRepositorio.cs",
+              "RelativeDocumentMoniker": "Interface\\Repositorio\\ITipoTarefaRepositorio.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Interface\\Repositorio\\ITipoTarefaRepositorio.cs",
+              "RelativeToolTip": "Interface\\Repositorio\\ITipoTarefaRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:55:59.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoTarefaRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Infraestrutura\\Repositorio\\TipoTarefaRepositorio.cs",
+              "RelativeDocumentMoniker": "Infraestrutura\\Repositorio\\TipoTarefaRepositorio.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\Infraestrutura\\Repositorio\\TipoTarefaRepositorio.cs",
+              "RelativeToolTip": "Infraestrutura\\Repositorio\\TipoTarefaRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:55:58.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TipoTarefaController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\GerenciadorTarefas\\Controllers\\TipoTarefaController.cs",
+              "RelativeDocumentMoniker": "GerenciadorTarefas\\Controllers\\TipoTarefaController.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\Back-End-Web-API\\GerenciadorTarefas\\GerenciadorTarefas\\Controllers\\TipoTarefaController.cs",
+              "RelativeToolTip": "GerenciadorTarefas\\Controllers\\TipoTarefaController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:55:55.344Z",
               "EditorCaption": ""
             }
           ]

@@ -16,5 +16,6 @@ namespace Interface.Service
         Task<LoginDTO?> getAsync(int id);
         Task<IEnumerable<LoginDTO>> getAllAsync(Expression<Func<Login, bool>>expression);
         Task updateAsync(LoginDTO login);
+        Task<LoginDTO?> AutenticarAsync(LoginDTO login);
     }
 }

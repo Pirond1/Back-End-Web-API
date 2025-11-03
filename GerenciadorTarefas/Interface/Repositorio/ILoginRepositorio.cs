@@ -15,5 +15,6 @@ namespace Interface.Repositorio
         Task<Login?> getAsync(int id);
         Task<IEnumerable<Login>> getAllAsync(Expression<Func<Login, bool>> expression);
         Task updateAsync(Login login);
+        Task<Login?> getUserAsync(string usuario);
     }
 }

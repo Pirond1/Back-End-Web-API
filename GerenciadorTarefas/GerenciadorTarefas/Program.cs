@@ -10,6 +10,9 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Dominio.DTOs;
+using FluentValidation;
+using GerenciadorTarefas.Validation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -71,6 +74,10 @@ builder.Services.AddScoped<ITipoTarefaRepositorio, TipoTarefaRepositorio>();
 builder.Services.AddScoped<ITipoTarefaService, TipoTarefaService>();
 builder.Services.AddScoped<ILoginRepositorio, LoginRepositorio>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IValidator<LoginDTO>, LoginValidation>();
+builder.Services.AddScoped<IValidator<TarefaDTO>, TarefaValidation>();
+builder.Services.AddScoped<IValidator<TipoTarefaDTO>, TipoTarefaValidation>();
+
 
 var app = builder.Build();
 

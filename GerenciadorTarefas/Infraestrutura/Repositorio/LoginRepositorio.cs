@@ -48,5 +48,10 @@ namespace Infraestrutura.Repositorio
             this.contexto.Entry(login).State = EntityState.Modified;
             await this.contexto.SaveChangesAsync();
         }
+
+        public async Task<Login?> getUserAsync(string usuario)
+        {
+            return await this.contexto.Login.FirstOrDefaultAsync(p => p.usuario == usuario);
+        }
     }
 }

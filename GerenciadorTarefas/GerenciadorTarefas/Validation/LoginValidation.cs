@@ -9,7 +9,7 @@ namespace GerenciadorTarefas.Validation
         {
             RuleFor(p => p.usuario)
                 .MaximumLength(20)
-                .WithMessage("O Usuáriop Precisa Ter no Máximo 20 Caracteres!");
+                .WithMessage("O Usuário Precisa Ter no Máximo 20 Caracteres!");
             RuleFor(p => p.usuario)
                 .NotEmpty()
                 .WithMessage("O Usuário Não Pode Ser Vazio!");

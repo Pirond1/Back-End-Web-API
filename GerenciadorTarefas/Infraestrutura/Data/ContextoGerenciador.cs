@@ -36,6 +36,7 @@ namespace Infraestrutura.Data
                 builder.Property(p => p.nome).IsRequired().HasMaxLength(50);
                 builder.ToTable("TipoTarefa");
                 builder.HasKey(p => p.id);
+                builder.HasOne(p => p.login).WithMany(p => p.tipotarefas).HasForeignKey(p => p.idLogin).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Login>(builder =>

@@ -104,15 +104,15 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "GerenciadorTarefas.Controllers.SegurancaController",
-    "Method": "Login",
-    "RelativePath": "api/Seguranca",
+    "ContainingType": "GerenciadorTarefas.Controllers.LoginController",
+    "Method": "auth",
+    "RelativePath": "api/Login/Auth",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginDetalhes",
+        "Name": "login",
         "Type": "Dominio.DTOs.LoginDTO",
         "IsRequired": true
       }
@@ -265,6 +265,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[Dominio.DTOs.TipoTarefaDTO, Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GerenciadorTarefas.Controllers.TipoTarefaController",
+    "Method": "getAsync",
+    "RelativePath": "api/TipoTarefa/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dominio.DTOs.TipoTarefaDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

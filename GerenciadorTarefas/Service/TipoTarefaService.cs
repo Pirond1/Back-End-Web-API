@@ -24,37 +24,51 @@ namespace Service
             this.mapper = mapper;
         }
 
-        public async Task<TipoTarefaDTO> addAsync(TipoTarefaDTO tipoTarefa)
+        public async Task<TipoTarefaDTO> addAsync(TipoTarefaDTO tipoTarefa, int userID)
         {
             var entidade = mapper.Map<TipoTarefa>(tipoTarefa);
+            entidade.idLogin = userID;
             entidade = await this.repositorio.addAsync(entidade);
             return mapper.Map<TipoTarefaDTO>(entidade);
         }
 
-        public async Task<IEnumerable<TipoTarefaDTO>> getAllAsync(Expression<Func<TipoTarefa, bool>> expression)
+        public async Task<IEnumerable<TipoTarefaDTO>> getAllAsync(int userID)
         {
-            var listaTipo = await this.repositorio.getAllAsync(expression);
+            var listaTipo = await this.repositorio.getAllAsync(p => p.idLogin == userID);
             return mapper.Map<IEnumerable<TipoTarefaDTO>>(listaTipo);
         }
 
-        public Task<TipoTarefaDTO?> getAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task removeAsync(int id)
+        public async Task<TipoTarefaDTO?> getAsync(int id, int userID)
         {
             var tipo = await this.repositorio.getAsync(id);
-            if(tipo != null)
+
+            if (tipo == null || tipo.idLogin != userID)
+            {
+                return null;
+            }
+
+            return mapper.Map<TipoTarefaDTO>(tipo);
+        }
+
+        public async Task removeAsync(int id, int userID)
+        {
+            var tipo = await this.repositorio.getAsync(id);
+            if(tipo != null && tipo.idLogin == userID)
             {
                 await this.repositorio.removeAsync(tipo);
             }
         }
 
-        public async Task updateAsync(TipoTarefaDTO tipoTarefa)
+        public async Task updateAsync(TipoTarefaDTO tipoTarefa, int userID)
         {
-            var tipo = mapper.Map<TipoTarefa>(tipoTarefa);
-            await this.repositorio.updateAsync(tipo);
+            var tipo = await this.repositorio.getAsync(tipoTarefa.id);
+            if (tipo != null && tipo.idLogin == userID)
+            {
+                mapper.Map(tipoTarefa, tipo);
+                tipo.idLogin = userID;
+                await this.repositorio.updateAsync(tipo);
+            }
+            
         }
     }
 }

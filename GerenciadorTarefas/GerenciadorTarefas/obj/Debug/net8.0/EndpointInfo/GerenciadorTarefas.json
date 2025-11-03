@@ -179,10 +179,10 @@
         }
       }
     },
-    "/api/Seguranca": {
+    "/api/Login/Auth": {
       "post": {
         "tags": [
-          "Seguranca"
+          "Login"
         ],
         "requestBody": {
           "content": {
@@ -479,6 +479,44 @@
       }
     },
     "/api/TipoTarefa/{id}": {
+      "get": {
+        "tags": [
+          "TipoTarefa"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoTarefaDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoTarefaDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TipoTarefaDTO"
+                }
+              }
+            }
+          }
+        }
+      },
       "delete": {
         "tags": [
           "TipoTarefa"
@@ -587,9 +625,6 @@
           "idTipoTarefa": {
             "type": "integer",
             "format": "int32"
-          },
-          "tipotarefa": {
-            "$ref": "#/components/schemas/TipoTarefaDTO"
           }
         },
         "additionalProperties": false

@@ -16,6 +16,5 @@ namespace Dominio.DTOs
         public DateTime? DataVencimento { get; set; }
 
         public int idTipoTarefa { get; set; }
-        public virtual TipoTarefaDTO? tipotarefa { get; set; }
     }
 }
