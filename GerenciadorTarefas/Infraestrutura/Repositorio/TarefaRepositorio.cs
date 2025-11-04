@@ -29,7 +29,7 @@ namespace Infraestrutura.Repositorio
 
         public async Task<IEnumerable<Tarefa>> getAllAsync(Expression<Func<Tarefa, bool>> expression)
         {
-            return await this.contexto.Tarefa.Where(expression).OrderBy(p => p.id).ToListAsync();
+            return await this.contexto.Tarefa.Where(expression).Include(t => t.tipotarefa).OrderBy(p => p.id).ToListAsync();
         }
 
         public async Task<Tarefa?> getAsync(int id)

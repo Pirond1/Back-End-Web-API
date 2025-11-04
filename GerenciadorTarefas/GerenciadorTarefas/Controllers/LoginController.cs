@@ -98,7 +98,7 @@ namespace GerenciadorTarefas.Controllers
 
                 return Ok(new
                 {
-                    acces_token = tokenString,
+                    access_token = tokenString,
                     token_type = "Bearer",
                     expires_in = 60 * 60 //60 Min
                 });

@@ -78,6 +78,20 @@ builder.Services.AddScoped<IValidator<LoginDTO>, LoginValidation>();
 builder.Services.AddScoped<IValidator<TarefaDTO>, TarefaValidation>();
 builder.Services.AddScoped<IValidator<TipoTarefaDTO>, TipoTarefaValidation>();
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:3000")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        });
+});
 
 var app = builder.Build();
 
@@ -89,7 +103,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors(MyAllowSpecificOrigins);
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
