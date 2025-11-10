@@ -34,9 +34,9 @@ namespace GerenciadorTarefas.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<TarefaDTO>>> getAllAsync()
+        public async Task<ActionResult<List<TarefaDTO>>> getAllAsync(int? idTipoTarefa)
         {
-            var lista = await this.service.getAllAsync(UsuarioID);
+            var lista = await this.service.getAllAsync(UsuarioID, idTipoTarefa);
             return Ok(lista);
         }
 

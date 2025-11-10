@@ -11,5 +11,6 @@ namespace Dominio.DTOs
     {
         public int id { get; set; }
         public string nome { get; set; } = String.Empty;
+        public string cor { get; set; }
     }
 }

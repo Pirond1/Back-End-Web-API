@@ -4,6 +4,7 @@ using Infraestrutura.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infraestrutura.Migrations
 {
     [DbContext(typeof(ContextoGerenciador))]
-    partial class ContextoGerenciadorModelSnapshot : ModelSnapshot
+    [Migration("20251110031906_v1.4")]
+    partial class v14
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,6 +59,10 @@ namespace Infraestrutura.Migrations
                     b.Property<DateTime?>("DataVencimento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("cor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("descricao")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -91,10 +98,6 @@ namespace Infraestrutura.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("cor")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("idLogin")
                         .HasColumnType("int");

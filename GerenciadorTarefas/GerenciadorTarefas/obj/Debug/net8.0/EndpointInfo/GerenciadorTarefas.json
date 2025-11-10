@@ -261,6 +261,16 @@
         "tags": [
           "Tarefa"
         ],
+        "parameters": [
+          {
+            "name": "idTipoTarefa",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -625,6 +635,9 @@
           "idTipoTarefa": {
             "type": "integer",
             "format": "int32"
+          },
+          "tipotarefa": {
+            "$ref": "#/components/schemas/TipoTarefaDTO"
           }
         },
         "additionalProperties": false
@@ -637,6 +650,10 @@
             "format": "int32"
           },
           "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "cor": {
             "type": "string",
             "nullable": true
           }

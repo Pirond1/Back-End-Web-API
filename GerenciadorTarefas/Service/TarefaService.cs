@@ -3,6 +3,7 @@ using Dominio.DTOs;
 using Dominio.Entidades;
 using Interface.Repositorio;
 using Interface.Service;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,10 +33,18 @@ namespace Service
             return mapper.Map<TarefaDTO>(entidade);
         }
 
-        public async Task<IEnumerable<TarefaDTO>> getAllAsync(int userID)
+        public async Task<IEnumerable<TarefaDTO>> getAllAsync(int userID, int? idTipoTarefa)
         {
-            var listaTarefa = await this.repositorio.getAllAsync(t => t.idLogin == userID);
-            return mapper.Map<IEnumerable<TarefaDTO>>(listaTarefa);
+            if (idTipoTarefa.HasValue)
+            {
+                var listaFiltrada = await this.repositorio.getAllAsync(t => t.idLogin == userID && t.idTipoTarefa == idTipoTarefa.Value);
+                return mapper.Map<IEnumerable<TarefaDTO>>(listaFiltrada);
+            }
+            else
+            {
+                var listaCompleta = await this.repositorio.getAllAsync(t => t.idLogin == userID);
+                return mapper.Map<IEnumerable<TarefaDTO>>(listaCompleta);
+            }
         }
 
         public async Task<TarefaDTO?> getAsync(int id, int userID)
@@ -64,6 +73,11 @@ namespace Service
             {
                 mapper.Map(tarefa, tar);
                 tar.idLogin = userID;
+                tar.idTipoTarefa = tarefa.idTipoTarefa;
+                tar.status = tarefa.status;
+
+                tar.tipotarefa = null;
+
                 await this.repositorio.updateAsync(tar);
             }
             
